@@ -1,7 +1,3 @@
-# =============================================================================
-# logger.py - Registo de operações do aeroporto
-# =============================================================================
-
 import os
 import multiprocessing
 from datetime import datetime
@@ -16,7 +12,7 @@ class AirportLogger:
 
     def __init__(self, lock: multiprocessing.Lock):
         self.lock = lock
-        # Cria/limpa o ficheiro de log no início da simulação
+        #Cria/limpa o ficheiro de log no início da simulação
         with open(LOG_FILE, "w", encoding="utf-8") as f:
             f.write("=" * 70 + "\n")
             f.write(f"  LOG DO SISTEMA DE EMBARQUE - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
@@ -29,7 +25,7 @@ class AirportLogger:
         with self.lock:
             with open(LOG_FILE, "a", encoding="utf-8") as f:
                 f.write(line)
-            # Também imprime na consola
+            #Também imprime na consola
             print(line, end="")
 
     def chegada(self, pid: int, nome: str, classe: str, prioridade: str):
@@ -51,7 +47,7 @@ class AirportLogger:
         self._write(f"DESISTÊNCIA| Passageiro {nome} desistiu após {espera:.1f}s de espera")
 
     def resumo(self, total: int, embarcados: int, desistencias: int, tempo_medio: float):
-        """Escreve o resumo final da simulação no log."""
+        """Escreve o resumo da simulação no log"""
         with self.lock:
             with open(LOG_FILE, "a", encoding="utf-8") as f:
                 f.write("\n" + "=" * 70 + "\n")

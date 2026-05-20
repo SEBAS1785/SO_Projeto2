@@ -1,7 +1,3 @@
-# =============================================================================
-# main.py - Ponto de entrada da simulação do aeroporto
-# =============================================================================
-
 import time
 import random
 import multiprocessing
@@ -14,19 +10,19 @@ from passageiro import passenger_process
 
 def run_simulation(high_demand: bool = False):
     """
-    Orquestra a simulação completa:
+    Simulação completa:
       1. Cria estruturas de dados partilhadas
       2. Lança o processo servidor
       3. Lança os processos passageiro com intervalos de chegada
-      4. Aguarda conclusão e imprime resumo
+      4. Aguarda conclusão e imprime o resumo
     """
     manager = multiprocessing.Manager()
 
-    # --- Estruturas partilhadas ---
+    #Estruturas partilhadas
     queue_lock   = multiprocessing.Lock()
-    queue_list   = manager.list()        # Fila de embarque (ordenada por prioridade)
+    queue_list   = manager.list()        #Fila de embarque (ordenada por prioridade)
     notify_event = multiprocessing.Event()
-    result_dict  = manager.dict()        # Resultados por passageiro
+    result_dict  = manager.dict()        #Resultados por passageiro
 
     stats_lock   = multiprocessing.Lock()
     stats_dict   = manager.dict({"embarcados": 0, "total_espera": 0.0})
@@ -39,7 +35,7 @@ def run_simulation(high_demand: bool = False):
     if high_demand:
         print("⚠  Modo ALTA DEMANDA activado!\n")
 
-    # --- Processo servidor ---
+    #Processo servidor
     server = multiprocessing.Process(
         target=airport_server,
         args=(
@@ -52,7 +48,7 @@ def run_simulation(high_demand: bool = False):
     )
     server.start()
 
-    # --- Processos passageiro ---
+    #Processos passageiro
     passengers = []
     for pid in range(1, NUM_PASSENGERS + 1):
         p = multiprocessing.Process(
@@ -67,24 +63,24 @@ def run_simulation(high_demand: bool = False):
         passengers.append(p)
         p.start()
 
-        # Intervalo de chegada (mais curto em alta demanda)
+        #Intervalo de chegada (mais curto em alta demanda)
         if high_demand:
             time.sleep(random.uniform(0.0, 0.3))
         else:
             time.sleep(random.uniform(ARRIVAL_INTERVAL * 0.5, ARRIVAL_INTERVAL * 1.5))
 
-    # --- Aguarda todos os passageiros terminarem ---
+    #Aguarda todos os passageiros terminarem
     for p in passengers:
         p.join()
 
-    # Sinaliza ao servidor para encerrar
+    #Sinaliza ao servidor para encerrar
     stop_event.set()
-    notify_event.set()   # Acorda o servidor se estiver em wait()
+    notify_event.set()   #Acorda o servidor se estiver em wait()
     server.join(timeout=10)
     if server.is_alive():
         server.terminate()
 
-    # --- Resumo final ---
+    #Resumo final
     embarcados   = stats_dict.get("embarcados", 0)
     total_espera = stats_dict.get("total_espera", 0.0)
     desistencias = NUM_PASSENGERS - embarcados
@@ -111,6 +107,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # Necessário no Windows para multiprocessing
     multiprocessing.freeze_support()
     main()

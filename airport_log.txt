@@ -1,87 +1,87 @@
 ======================================================================
-  LOG DO SISTEMA DE EMBARQUE - 2026-05-14 14:58:32
+  LOG DO SISTEMA DE EMBARQUE - 2026-05-20 10:17:22
 ======================================================================
 
-[14:58:32.547] CHEGADA    | Passageiro Inês_1 (PID=1) | Classe: económica  | Prioridade: baixa
-[14:58:32.552] FILA       | Passageiro Inês_1 entrou na fila | Posição estimada: 1
-[14:58:32.695] CHEGADA    | Passageiro Nuno_2 (PID=2) | Classe: executiva  | Prioridade: média
-[14:58:32.701] FILA       | Passageiro Nuno_2 entrou na fila | Posição estimada: 1
-[14:58:32.722] CHEGADA    | Passageiro Bruno_3 (PID=3) | Classe: executiva  | Prioridade: média
-[14:58:32.729] FILA       | Passageiro Bruno_3 entrou na fila | Posição estimada: 1
-[14:58:32.776] CHEGADA    | Passageiro David_4 (PID=4) | Classe: executiva  | Prioridade: média
-[14:58:32.784] FILA       | Passageiro David_4 entrou na fila | Posição estimada: 1
-[14:58:32.892] CHEGADA    | Passageiro David_5 (PID=5) | Classe: primeira   | Prioridade: alta
-[14:58:32.898] FILA       | Passageiro David_5 entrou na fila | Posição estimada: 1
-[14:58:32.999] CHEGADA    | Passageiro Kátia_6 (PID=6) | Classe: económica  | Prioridade: baixa
-[14:58:33.005] EMBARQUE   | Passageiro Nuno_2 | Portão 1 | Agente 1 | Espera: 0.5s
-[14:58:33.006] FILA       | Passageiro Kátia_6 entrou na fila | Posição estimada: 3
-[14:58:33.017] EMBARQUE   | Passageiro Inês_1 | Portão 2 | Agente 2 | Espera: 0.6s
-[14:58:33.029] EMBARQUE   | Passageiro Bruno_3 | Portão 3 | Agente 3 | Espera: 0.4s
-[14:58:33.173] CHEGADA    | Passageiro João_7 (PID=7) | Classe: económica  | Prioridade: baixa
-[14:58:33.179] FILA       | Passageiro João_7 entrou na fila | Posição estimada: 4
-[14:58:33.365] CHEGADA    | Passageiro Kátia_9 (PID=9) | Classe: económica  | Prioridade: baixa
-[14:58:33.371] FILA       | Passageiro Kátia_9 entrou na fila | Posição estimada: 5
-[14:58:33.385] CHEGADA    | Passageiro Hugo_8 (PID=8) | Classe: executiva  | Prioridade: média
-[14:58:33.391] FILA       | Passageiro Hugo_8 entrou na fila | Posição estimada: 3
-[14:58:33.501] CHEGADA    | Passageiro Bruno_10 (PID=10) | Classe: primeira   | Prioridade: alta
-[14:58:33.510] FILA       | Passageiro Bruno_10 entrou na fila | Posição estimada: 2
-[14:58:33.606] CHEGADA    | Passageiro Tiago_11 (PID=11) | Classe: económica  | Prioridade: baixa
-[14:58:33.615] FILA       | Passageiro Tiago_11 entrou na fila | Posição estimada: 8
-[14:58:33.861] CHEGADA    | Passageiro Bruno_12 (PID=12) | Classe: primeira   | Prioridade: alta
-[14:58:33.870] FILA       | Passageiro Bruno_12 entrou na fila | Posição estimada: 3
-[14:58:34.046] CHEGADA    | Passageiro Hugo_13 (PID=13) | Classe: executiva  | Prioridade: média
-[14:58:34.057] FILA       | Passageiro Hugo_13 entrou na fila | Posição estimada: 6
-[14:58:34.353] CHEGADA    | Passageiro Olga_14 (PID=14) | Classe: primeira   | Prioridade: alta
-[14:58:34.362] FILA       | Passageiro Olga_14 entrou na fila | Posição estimada: 4
-[14:58:34.506] CONCLUÍDO  | Passageiro Nuno_2 embarcou | Portão 1 | Duração: 1.5s
-[14:58:34.531] CONCLUÍDO  | Passageiro Bruno_3 embarcou | Portão 3 | Duração: 1.5s
-[14:58:34.647] CHEGADA    | Passageiro Paulo_15 (PID=15) | Classe: primeira   | Prioridade: alta
-[14:58:34.656] FILA       | Passageiro Paulo_15 entrou na fila | Posição estimada: 5
-[14:58:34.938] EMBARQUE   | Passageiro David_5 | Portão 1 | Agente 4 | Espera: 2.2s
-[14:58:34.945] EMBARQUE   | Passageiro Bruno_10 | Portão 3 | Agente 1 | Espera: 1.6s
-[14:58:34.969] CHEGADA    | Passageiro Luís_16 (PID=16) | Classe: executiva  | Prioridade: média
-[14:58:34.978] FILA       | Passageiro Luís_16 entrou na fila | Posição estimada: 7
-[14:58:35.019] CONCLUÍDO  | Passageiro Inês_1 embarcou | Portão 2 | Duração: 2.0s
-[14:58:35.268] CHEGADA    | Passageiro Rana_17 (PID=17) | Classe: económica  | Prioridade: baixa
-[14:58:35.276] FILA       | Passageiro Rana_17 entrou na fila | Posição estimada: 12
-[14:58:35.348] CHEGADA    | Passageiro Hugo_18 (PID=18) | Classe: executiva  | Prioridade: média
-[14:58:35.358] FILA       | Passageiro Hugo_18 entrou na fila | Posição estimada: 7
-[14:58:35.514] EMBARQUE   | Passageiro Bruno_12 | Portão 2 | Agente 3 | Espera: 1.7s
-[14:58:35.572] CHEGADA    | Passageiro David_19 (PID=19) | Classe: primeira   | Prioridade: alta
-[14:58:35.581] FILA       | Passageiro David_19 entrou na fila | Posição estimada: 3
-[14:58:35.761] CHEGADA    | Passageiro Paulo_20 (PID=20) | Classe: económica  | Prioridade: baixa
-[14:58:35.771] FILA       | Passageiro Paulo_20 entrou na fila | Posição estimada: 14
-[14:58:35.940] CONCLUÍDO  | Passageiro David_5 embarcou | Portão 1 | Duração: 1.0s
-[14:58:35.947] CONCLUÍDO  | Passageiro Bruno_10 embarcou | Portão 3 | Duração: 1.0s
-[14:58:36.337] EMBARQUE   | Passageiro Olga_14 | Portão 1 | Agente 2 | Espera: 2.0s
-[14:58:36.348] EMBARQUE   | Passageiro Paulo_15 | Portão 3 | Agente 4 | Espera: 1.8s
-[14:58:36.515] CONCLUÍDO  | Passageiro Bruno_12 embarcou | Portão 2 | Duração: 1.0s
-[14:58:36.958] EMBARQUE   | Passageiro David_19 | Portão 2 | Agente 1 | Espera: 1.5s
-[14:58:37.338] CONCLUÍDO  | Passageiro Olga_14 embarcou | Portão 1 | Duração: 1.0s
-[14:58:37.350] CONCLUÍDO  | Passageiro Paulo_15 embarcou | Portão 3 | Duração: 1.0s
-[14:58:37.635] EMBARQUE   | Passageiro David_4 | Portão 1 | Agente 3 | Espera: 4.9s
-[14:58:37.648] EMBARQUE   | Passageiro Hugo_8 | Portão 3 | Agente 2 | Espera: 4.5s
-[14:58:37.959] CONCLUÍDO  | Passageiro David_19 embarcou | Portão 2 | Duração: 1.0s
-[14:58:38.251] EMBARQUE   | Passageiro Hugo_13 | Portão 2 | Agente 4 | Espera: 4.2s
-[14:58:39.136] CONCLUÍDO  | Passageiro David_4 embarcou | Portão 1 | Duração: 1.5s
-[14:58:39.149] CONCLUÍDO  | Passageiro Hugo_8 embarcou | Portão 3 | Duração: 1.5s
-[14:58:39.516] EMBARQUE   | Passageiro Luís_16 | Portão 1 | Agente 1 | Espera: 4.7s
-[14:58:39.526] EMBARQUE   | Passageiro Hugo_18 | Portão 3 | Agente 3 | Espera: 4.3s
-[14:58:39.753] CONCLUÍDO  | Passageiro Hugo_13 embarcou | Portão 2 | Duração: 1.5s
-[14:58:40.162] EMBARQUE   | Passageiro Kátia_6 | Portão 2 | Agente 2 | Espera: 7.3s
-[14:58:41.018] CONCLUÍDO  | Passageiro Luís_16 embarcou | Portão 1 | Duração: 1.5s
-[14:58:41.027] CONCLUÍDO  | Passageiro Hugo_18 embarcou | Portão 3 | Duração: 1.5s
-[14:58:41.414] EMBARQUE   | Passageiro João_7 | Portão 1 | Agente 4 | Espera: 8.4s
-[14:58:41.417] EMBARQUE   | Passageiro Kátia_9 | Portão 3 | Agente 1 | Espera: 8.1s
-[14:58:42.163] CONCLUÍDO  | Passageiro Kátia_6 embarcou | Portão 2 | Duração: 2.0s
-[14:58:42.652] EMBARQUE   | Passageiro Tiago_11 | Portão 2 | Agente 3 | Espera: 9.1s
-[14:58:43.415] CONCLUÍDO  | Passageiro João_7 embarcou | Portão 1 | Duração: 2.0s
-[14:58:43.419] CONCLUÍDO  | Passageiro Kátia_9 embarcou | Portão 3 | Duração: 2.0s
-[14:58:43.919] EMBARQUE   | Passageiro Rana_17 | Portão 1 | Agente 2 | Espera: 8.8s
-[14:58:43.925] EMBARQUE   | Passageiro Paulo_20 | Portão 3 | Agente 4 | Espera: 8.2s
-[14:58:44.654] CONCLUÍDO  | Passageiro Tiago_11 embarcou | Portão 2 | Duração: 2.0s
-[14:58:45.920] CONCLUÍDO  | Passageiro Rana_17 embarcou | Portão 1 | Duração: 2.0s
-[14:58:45.927] CONCLUÍDO  | Passageiro Paulo_20 embarcou | Portão 3 | Duração: 2.0s
+[10:17:22.911] CHEGADA    | Passageiro Luís_1 (PID=1) | Classe: económica  | Prioridade: baixa
+[10:17:22.915] FILA       | Passageiro Luís_1 entrou na fila | Posição estimada: 1
+[10:17:23.329] EMBARQUE   | Passageiro Luís_1 | Portão 1 | Agente 1 | Espera: 0.4s
+[10:17:23.617] CHEGADA    | Passageiro Hugo_2 (PID=2) | Classe: económica  | Prioridade: baixa
+[10:17:23.621] FILA       | Passageiro Hugo_2 entrou na fila | Posição estimada: 1
+[10:17:23.833] EMBARQUE   | Passageiro Hugo_2 | Portão 2 | Agente 2 | Espera: 0.2s
+[10:17:23.993] CHEGADA    | Passageiro Kátia_3 (PID=3) | Classe: primeira   | Prioridade: alta
+[10:17:23.996] FILA       | Passageiro Kátia_3 entrou na fila | Posição estimada: 1
+[10:17:24.206] EMBARQUE   | Passageiro Kátia_3 | Portão 3 | Agente 3 | Espera: 0.2s
+[10:17:24.532] CHEGADA    | Passageiro Bruno_4 (PID=4) | Classe: primeira   | Prioridade: alta
+[10:17:24.536] FILA       | Passageiro Bruno_4 entrou na fila | Posição estimada: 1
+[10:17:24.862] CHEGADA    | Passageiro Luís_5 (PID=5) | Classe: primeira   | Prioridade: alta
+[10:17:24.867] FILA       | Passageiro Luís_5 entrou na fila | Posição estimada: 2
+[10:17:25.207] CONCLUÍDO  | Passageiro Kátia_3 embarcou | Portão 3 | Duração: 1.0s
+[10:17:25.330] CONCLUÍDO  | Passageiro Luís_1 embarcou | Portão 1 | Duração: 2.0s
+[10:17:25.464] CHEGADA    | Passageiro João_6 (PID=6) | Classe: económica  | Prioridade: baixa
+[10:17:25.469] FILA       | Passageiro João_6 entrou na fila | Posição estimada: 3
+[10:17:25.683] EMBARQUE   | Passageiro Bruno_4 | Portão 3 | Agente 4 | Espera: 1.2s
+[10:17:25.695] EMBARQUE   | Passageiro Luís_5 | Portão 1 | Agente 3 | Espera: 0.8s
+[10:17:25.834] CONCLUÍDO  | Passageiro Hugo_2 embarcou | Portão 2 | Duração: 2.0s
+[10:17:25.956] CHEGADA    | Passageiro Hugo_7 (PID=7) | Classe: executiva  | Prioridade: média
+[10:17:25.960] FILA       | Passageiro Hugo_7 entrou na fila | Posição estimada: 1
+[10:17:26.172] EMBARQUE   | Passageiro Hugo_7 | Portão 2 | Agente 1 | Espera: 0.2s
+[10:17:26.521] CHEGADA    | Passageiro Gisela_8 (PID=8) | Classe: primeira   | Prioridade: alta
+[10:17:26.525] FILA       | Passageiro Gisela_8 entrou na fila | Posição estimada: 1
+[10:17:26.685] CONCLUÍDO  | Passageiro Bruno_4 embarcou | Portão 3 | Duração: 1.0s
+[10:17:26.696] CONCLUÍDO  | Passageiro Luís_5 embarcou | Portão 1 | Duração: 1.0s
+[10:17:26.878] CHEGADA    | Passageiro Bruno_9 (PID=9) | Classe: executiva  | Prioridade: média
+[10:17:26.881] FILA       | Passageiro Bruno_9 entrou na fila | Posição estimada: 1
+[10:17:27.047] EMBARQUE   | Passageiro Gisela_8 | Portão 3 | Agente 2 | Espera: 0.5s
+[10:17:27.057] EMBARQUE   | Passageiro João_6 | Portão 1 | Agente 4 | Espera: 1.6s
+[10:17:27.287] CHEGADA    | Passageiro David_10 (PID=10) | Classe: executiva  | Prioridade: média
+[10:17:27.291] FILA       | Passageiro David_10 entrou na fila | Posição estimada: 2
+[10:17:27.674] CONCLUÍDO  | Passageiro Hugo_7 embarcou | Portão 2 | Duração: 1.5s
+[10:17:27.941] CHEGADA    | Passageiro Rana_11 (PID=11) | Classe: económica  | Prioridade: baixa
+[10:17:27.945] FILA       | Passageiro Rana_11 entrou na fila | Posição estimada: 2
+[10:17:28.048] CONCLUÍDO  | Passageiro Gisela_8 embarcou | Portão 3 | Duração: 1.0s
+[10:17:28.122] EMBARQUE   | Passageiro Bruno_9 | Portão 2 | Agente 3 | Espera: 1.2s
+[10:17:28.258] CHEGADA    | Passageiro Maria_12 (PID=12) | Classe: económica  | Prioridade: baixa
+[10:17:28.262] FILA       | Passageiro Maria_12 entrou na fila | Posição estimada: 2
+[10:17:28.458] EMBARQUE   | Passageiro David_10 | Portão 3 | Agente 1 | Espera: 1.2s
+[10:17:28.784] CHEGADA    | Passageiro Bruno_13 (PID=13) | Classe: executiva  | Prioridade: média
+[10:17:28.788] FILA       | Passageiro Bruno_13 entrou na fila | Posição estimada: 1
+[10:17:29.058] CONCLUÍDO  | Passageiro João_6 embarcou | Portão 1 | Duração: 2.0s
+[10:17:29.195] CHEGADA    | Passageiro Fábio_14 (PID=14) | Classe: económica  | Prioridade: baixa
+[10:17:29.200] FILA       | Passageiro Fábio_14 entrou na fila | Posição estimada: 3
+[10:17:29.303] EMBARQUE   | Passageiro Bruno_13 | Portão 1 | Agente 2 | Espera: 0.5s
+[10:17:29.491] CHEGADA    | Passageiro Fábio_15 (PID=15) | Classe: primeira   | Prioridade: alta
+[10:17:29.496] FILA       | Passageiro Fábio_15 entrou na fila | Posição estimada: 1
+[10:17:29.623] CONCLUÍDO  | Passageiro Bruno_9 embarcou | Portão 2 | Duração: 1.5s
+[10:17:29.960] CONCLUÍDO  | Passageiro David_10 embarcou | Portão 3 | Duração: 1.5s
+[10:17:30.019] CHEGADA    | Passageiro Rana_16 (PID=16) | Classe: económica  | Prioridade: baixa
+[10:17:30.019] EMBARQUE   | Passageiro Fábio_15 | Portão 2 | Agente 4 | Espera: 0.5s
+[10:17:30.024] FILA       | Passageiro Rana_16 entrou na fila | Posição estimada: 4
+[10:17:30.232] EMBARQUE   | Passageiro Rana_11 | Portão 3 | Agente 3 | Espera: 2.3s
+[10:17:30.508] CHEGADA    | Passageiro Olga_17 (PID=17) | Classe: primeira   | Prioridade: alta
+[10:17:30.512] FILA       | Passageiro Olga_17 entrou na fila | Posição estimada: 1
+[10:17:30.804] CONCLUÍDO  | Passageiro Bruno_13 embarcou | Portão 1 | Duração: 1.5s
+[10:17:31.021] CONCLUÍDO  | Passageiro Fábio_15 embarcou | Portão 2 | Duração: 1.0s
+[10:17:31.037] EMBARQUE   | Passageiro Olga_17 | Portão 1 | Agente 1 | Espera: 0.5s
+[10:17:31.087] CHEGADA    | Passageiro Vera_18 (PID=18) | Classe: executiva  | Prioridade: média
+[10:17:31.092] FILA       | Passageiro Vera_18 entrou na fila | Posição estimada: 1
+[10:17:31.301] EMBARQUE   | Passageiro Vera_18 | Portão 2 | Agente 2 | Espera: 0.2s
+[10:17:31.502] CHEGADA    | Passageiro Maria_19 (PID=19) | Classe: económica  | Prioridade: baixa
+[10:17:31.507] FILA       | Passageiro Maria_19 entrou na fila | Posição estimada: 4
+[10:17:31.983] CHEGADA    | Passageiro Olga_20 (PID=20) | Classe: executiva  | Prioridade: média
+[10:17:31.988] FILA       | Passageiro Olga_20 entrou na fila | Posição estimada: 1
+[10:17:32.038] CONCLUÍDO  | Passageiro Olga_17 embarcou | Portão 1 | Duração: 1.0s
+[10:17:32.233] CONCLUÍDO  | Passageiro Rana_11 embarcou | Portão 3 | Duração: 2.0s
+[10:17:32.499] EMBARQUE   | Passageiro Olga_20 | Portão 1 | Agente 4 | Espera: 0.5s
+[10:17:32.510] EMBARQUE   | Passageiro Maria_12 | Portão 3 | Agente 1 | Espera: 4.3s
+[10:17:32.803] CONCLUÍDO  | Passageiro Vera_18 embarcou | Portão 2 | Duração: 1.5s
+[10:17:33.140] EMBARQUE   | Passageiro Fábio_14 | Portão 2 | Agente 3 | Espera: 3.9s
+[10:17:34.000] CONCLUÍDO  | Passageiro Olga_20 embarcou | Portão 1 | Duração: 1.5s
+[10:17:34.388] EMBARQUE   | Passageiro Rana_16 | Portão 1 | Agente 2 | Espera: 4.4s
+[10:17:34.511] CONCLUÍDO  | Passageiro Maria_12 embarcou | Portão 3 | Duração: 2.0s
+[10:17:35.021] EMBARQUE   | Passageiro Maria_19 | Portão 3 | Agente 4 | Espera: 3.5s
+[10:17:35.141] CONCLUÍDO  | Passageiro Fábio_14 embarcou | Portão 2 | Duração: 2.0s
+[10:17:36.389] CONCLUÍDO  | Passageiro Rana_16 embarcou | Portão 1 | Duração: 2.0s
+[10:17:37.023] CONCLUÍDO  | Passageiro Maria_19 embarcou | Portão 3 | Duração: 2.0s
 
 ======================================================================
   RESUMO FINAL DA SIMULAÇÃO
@@ -89,5 +89,5 @@
   Total de passageiros  : 20
   Embarcados com sucesso: 20
   Desistências          : 0
-  Tempo médio de espera : 4.2s
+  Tempo médio de espera : 1.4s
 ======================================================================

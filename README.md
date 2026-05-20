@@ -1,59 +1,47 @@
-# Sistema de Embarque do Aeroporto
-### Trabalho Prático #2 — Comunicação e Sincronização entre Processos
-
----
-
-## Estrutura do Projeto
-
 ```
-airport_sim/
-├── main.py         # Ponto de entrada; orquestra a simulação
-├── airport.py      # Processo Servidor (Aeroporto)
-├── passenger.py    # Processo Cliente (Passageiro)
-├── logger.py       # Registo de operações (thread-safe)
-├── config.py       # Configurações globais (nº portões, agentes, etc.)
-└── README.md
+   main.py         # Ponto de entrada simulação
+   airport.py      # Processo Servidor (Aeroporto)
+   passenger.py    # Processo Cliente (Passageiro)
+   logger.py       # Registo de operações
+   config.py       # Configurações gerais (nº portões, agentes, etc.)
+   README.md
 ```
 
----
-
-## Como Executar
+# Como Executar
 
 ```bash
 python main.py
 ```
 
-Escolha o modo:
-- **1 — Normal**: passageiros chegam com intervalos aleatórios
-- **2 — Alta Demanda**: muitos passageiros chegam quase simultaneamente
+Escolher um modo:
+**1 — Normal**: passageiros chegam com intervalos aleatórios
+**2 — Alta Demanda**: muitos passageiros chegam quase simultaneamente
 
 O log é guardado automaticamente em `airport_log.txt`.
 
----
+# Arquitetura
 
-## Arquitetura
-
-### Componentes Principais
+# Componentes Principais
 
 | Componente | Tipo | Responsabilidade |
-|---|---|---|
+
 | `airport_server` | `Process` | Gere fila, aloca portões e agentes |
-| `passenger_process` | `Process` (×N) | Simula chegada, espera e embarque |
+| `passenger_process` | `Process` (×N) | Simula a chegada, a espera e o embarque |
 | `_boarding_and_release` | `Process` | Executa o embarque de 1 passageiro |
 | `AirportLogger` | Classe | Escreve no log com lock |
 
-### Comunicação entre Processos
+# Comunicação entre Processos
 
 ```
-Passageiro ──(escreve)──▶  queue_list  ◀──(lê/remove)── Servidor
-Passageiro ──(set)──────▶  notify_event ◀──(wait)─────── Servidor
-Servidor   ──(escreve)──▶  result_dict  ◀──(lê)────────── Passageiro
+Passageiro --(escreve)--->  queue_list   <--(lê/remove)--- Servidor
+Passageiro --(set)------->  notify_event <---(wait)---Servidor
+Servidor   --(escreve)--->  result_dict  <---(lê)--- Passageiro
 ```
 
-Toda a comunicação é feita via **memória partilhada** gerida pelo
+Toda a comunicação é feita através de **memória partilhada** gerida pelo
 `multiprocessing.Manager`.
 
-### Sincronização
+# Sincronização
 
 | Mecanismo | Onde é usado |
 |---|---|
@@ -66,38 +54,36 @@ Toda a comunicação é feita via **memória partilhada** gerida pelo
 | `Event` (notify_event) | Notifica o servidor de novas chegadas |
 | `Event` (stop_event) | Sinaliza ao servidor para encerrar |
 
-### Prioridade de Embarque
+# Prioridade de Embarque
 
 A fila é ordenada por:
-1. **Prioridade** (alta=0, média=1, baixa=2)
-2. **Hora de chegada** (FIFO dentro da mesma prioridade)
+1. **Prioridade** (alta = 0, média = 1, baixa = 2)
+2. **Hora de chegada**
 
 | Classe do Bilhete | Prioridade | Duração embarque |
-|---|---|---|
+
 | Primeira | Alta | 1.0s |
 | Executiva | Média | 1.5s |
 | Económica | Baixa | 2.0s |
 
-### Desistências
+# Desistências
 
 Se um passageiro esperar mais de `MAX_WAIT_TIME` segundos (configurável
 em `config.py`), abandona a fila e é registado como "desistido".
 
----
 
-## Configurações (config.py)
+# Configurações (config.py)
 
-| Parâmetro | Valor padrão | Descrição |
-|---|---|---|
+| Parâmetro | Valor default | Descrição |
+
 | `NUM_GATES` | 3 | Número de portões |
 | `NUM_AGENTS` | 4 | Número de agentes |
 | `NUM_PASSENGERS` | 20 | Total de passageiros |
 | `MAX_WAIT_TIME` | 15s | Timeout para desistência |
 | `ARRIVAL_INTERVAL` | 0.5s | Intervalo médio de chegada |
 
----
 
-## Exemplo de Log
+# Exemplo de Log
 
 ```
 [10:23:01.452] CHEGADA    | Passageiro Ana_1 (PID=1) | Classe: primeira   | Prioridade: alta
@@ -107,21 +93,17 @@ em `config.py`), abandona a fila e é registado como "desistido".
 [10:23:15.800] DESISTÊNCIA| Passageiro Nuno_7 desistiu após 15.0s de espera
 ```
 
----
 
-## Funcionalidades Implementadas
+# Funcionalidades Implementadas
 
-### Obrigatórias ✅
-- [x] Prioridade de embarque (alta / média / baixa)
-- [x] Portões exclusivos por passageiro (semáforo)
-- [x] Agentes de embarque (semáforo)
-- [x] Registo completo: chegada, prioridade, espera, duração, hora embarque
-- [x] Cenário de alta demanda
-- [x] Desistências por timeout
-
-### Opcionais ✅
-- [x] Tempo de embarque variável por prioridade
-- [x] Múltiplos portões com distribuição eficiente
-- [x] Simulação de surtos (modo alta demanda)
-- [x] Visualização em consola em tempo real
-- [x] Resumo de desistências no log final
+- Prioridade de embarque (alta / média / baixa)
+- Portões exclusivos por passageiro (semáforo)
+- Agentes de embarque (semáforo)
+- Registo completo: chegada, prioridade, espera, duração, hora embarque
+- Cenário de alta demanda
+- Desistências por timeout
+- Tempo de embarque variável por prioridade
+- Múltiplos portões com distribuição eficiente
+- Simulação de surtos (modo alta demanda)
+- Visualização em consola em tempo real
+- Resumo de desistências no log final
