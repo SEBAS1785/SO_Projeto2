@@ -33,7 +33,7 @@ def run_simulation(high_demand: bool = False):
     logger = AirportLogger(log_lock)
 
     if high_demand:
-        print("⚠  Modo ALTA DEMANDA activado!\n")
+        print("Modo ALTA DEMANDA ativado.\n")
 
     #Processo servidor
     server = multiprocessing.Process(

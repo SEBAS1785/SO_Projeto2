@@ -79,7 +79,7 @@ def airport_server(
 
     active_workers = []
 
-    print("\n✈  Servidor do aeroporto iniciado. A aguardar passageiros...\n")
+    print("\nServidor do aeroporto iniciado. A aguardar passageiros...\n")
 
     while not stop_event.is_set():
         #Aguarda notificação ou verifica a cada 0.3s
@@ -149,7 +149,7 @@ def airport_server(
     for w in active_workers:
         w.join()
 
-    print("\n✈  Servidor do aeroporto encerrado.")
+    print("\nServidor do aeroporto encerrado.")
 
 
 def _boarding_and_release(

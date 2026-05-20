@@ -103,7 +103,7 @@ em `config.py`), abandona a fila e é registado como "desistido".
 - Cenário de alta demanda
 - Desistências por timeout
 - Tempo de embarque variável por prioridade
-- Múltiplos portões com distribuição eficiente
-- Simulação de surtos (modo alta demanda)
+- Múltiplos portões com distribuição eficaz
+- Simulação modo de alta demanda
 - Visualização em consola em tempo real
-- Resumo de desistências no log final
+- Resumo de desistências no log
