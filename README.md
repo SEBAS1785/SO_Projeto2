@@ -1,9 +1,10 @@
 ```
    main.py         # Ponto de entrada simulação
-   airport.py      # Processo Servidor (Aeroporto)
-   passenger.py    # Processo Cliente (Passageiro)
-   logger.py       # Registo de operações
-   config.py       # Configurações gerais (nº portões, agentes, etc.)
+   aeroporto.py      # Processo Servidor (Aeroporto)
+   passageiro.py    # Processo Cliente (Passageiro)
+   registo.py       # Registo de operações
+   configuracao.py  # Configurações gerais (nº portões, agentes, etc.)
+   gui.py           #Interface gráfica + graficos
    README.md
 ```
 
@@ -11,6 +12,7 @@
 
 ```bash
 python main.py
+python gui.py
 ```
 
 Escolher um modo:
@@ -69,10 +71,10 @@ A fila é ordenada por:
 # Desistências
 
 Se um passageiro esperar mais de `MAX_WAIT_TIME` segundos (configurável
-em `config.py`), abandona a fila e é registado como "desistido".
+em `configuracao.py`), abandona a fila e é registado como "desistido".
 
 
-# Configurações (config.py)
+# Configurações (configuracao.py)
 
 | Parâmetro | Valor default | Descrição |
 
@@ -107,3 +109,4 @@ em `config.py`), abandona a fila e é registado como "desistido".
 - Simulação modo de alta demanda
 - Visualização em consola em tempo real
 - Resumo de desistências no log
+- Interface gráfica e gráficos para tratar a estatística
